@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](./LICENSE)
 
 **Bounded-entropy 4-tier constitutional memory for AI coding agents.**  
-*By [Javier Franco](https://github.com/JavierFrancoLeal) · `v1.0.0` · Apache-2.0*
+*By [Javier Franco](https://github.com/JavierFrancoLeal) · `v1.0.1` · Apache-2.0*
 
 > **"The world verifies the verifier."** — *Reality verifies the rule.*  
 > 📖 **Read the field-notes essay:** [Reality Verifies the Rule (Wan2.2, Android R8 & Wittgenstein)](./docs/ESSAY_REALITY_VERIFIES_THE_RULE.md)
@@ -61,13 +61,18 @@ npm test
 
 ---
 
-## Open-Source Agent Engineering Trilogy
+## Open-Source Agent Governance Suite
 
-| Flagship | Role | Status |
+| Repository | Role | Status |
 | :--- | :--- | :--- |
-| **[`casebook`](https://github.com/JavierFrancoLeal/casebook)** | Bounded-entropy 4-tier memory, Open Symptoms Radar & executable oracle | **`v1.0.0` Live** |
-| **`dual-brain-guard`** | Harness-agnostic mechanical cross-model verification (`CLI + MCP + hooks`) | Next (Phase B) |
-| **`autonomy-ladder`** | Evidence-based Traffic-Light autonomy grader (`🟢 / ⚑ / 🟡 / 🔴`) | Planned (Phase C) |
+| **[`casebook`](https://github.com/JavierFrancoLeal/casebook)** | Bounded-entropy 4-tier constitutional memory, Open Symptoms Radar & 5-to-1 compaction oracle | **`v1.0.1` Live** |
+| **[`dual-brain-guard`](https://github.com/JavierFrancoLeal/dual-brain-guard)** | Harness-agnostic mechanical Proposer != Verifier cross-model guard (`CLI + MCP + hooks`) | **`v1.1.1` Live** |
+| **[`autonomy-ladder`](https://github.com/JavierFrancoLeal/autonomy-ladder)** | Evidence-based Traffic-Light autonomy grader (`🟢 / ⚑ / 🟡 / 🔴` & `A/B/C/D` trust scores) | **`v1.0.2` Live** |
+| **[`governed-browser`](https://github.com/JavierFrancoLeal/governed-browser)** | Constitutional commit-click brake (`🛑 RED` on Send/Pay/Delete) & SHA-256 hash-chained audit trail | **`v1.0.1` Live** |
+| **[`forensic-contracts`](https://github.com/JavierFrancoLeal/forensic-contracts)** | 5-line `@forensic-contract` linter, `@blast-radius` cage enforcer & literal `sourcePin` verifier | **`v1.0.1` Live** |
+| **[`agent-governance`](https://github.com/JavierFrancoLeal/agent-governance)** | Complete 26-plugin DeepSeek Harness governance suite (mother repository) | **`v1.0.0` Live** |
+| **[`best-security-governance-architects`](https://github.com/JavierFrancoLeal/best-security-governance-architects)** | CPU-first pre-merge security & governance suite (`ECOSYSTEM_CONTRACT v1.2.0`) | **`v1.2.0` Live** |
+| **[`best-ui-ux-designers`](https://github.com/JavierFrancoLeal/best-ui-ux-designers)** | Adversarial UI/UX design judgment suite — 12 Barbell design minds & 4 Via Negativa auditors | **`v1.2.0` Live** |
 
 ---
 

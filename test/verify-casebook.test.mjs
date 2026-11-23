@@ -126,3 +126,25 @@ test('5. Bloated Tier-0 AGENTS.md (>900 tok) emits explicit entropy warning', ()
     fs.rmSync(dir, { recursive: true, force: true });
   }
 });
+
+test('6. Hardening: --repo=<path> syntax works, nonexistent repo fails with exit 1, and malformed CASE IDs are rejected', () => {
+  const missing = spawnSync(process.execPath, [SCRIPT, '--repo=/nonexistent/casebook-path'], { encoding: 'utf8' });
+  assert.equal(missing.status, 1);
+
+  const md = `---
+tier: 3
+tags:
+  - gpu-oom
+---
+
+- **CASE-1** \`[gpu-oom]\` · \`vendor-quirk\` · \`status: prose\`
+`;
+  const dir = makeTempRepo({ 'docs/ENGINEERING_POSTMORTEMS.md': md });
+  try {
+    const res = spawnSync(process.execPath, [SCRIPT, `--repo=${dir}`], { encoding: 'utf8' });
+    assert.equal(res.status, 1);
+    assert.match(res.stdout, /Malformed case ID "CASE-1"/);
+  } finally {
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
+});

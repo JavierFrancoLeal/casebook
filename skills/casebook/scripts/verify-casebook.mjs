@@ -11,8 +11,22 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const args = process.argv.slice(2);
-const repoIdx = args.indexOf('--repo');
-const repoRoot = path.resolve(repoIdx !== -1 && args[repoIdx + 1] ? args[repoIdx + 1] : process.cwd());
+let rawRepo = process.cwd();
+for (let i = 0; i < args.length; i++) {
+  if (args[i] === '--repo' && args[i + 1]) {
+    rawRepo = args[i + 1];
+    break;
+  }
+  if (args[i].startsWith('--repo=')) {
+    rawRepo = args[i].slice('--repo='.length);
+    break;
+  }
+}
+const repoRoot = path.resolve(rawRepo);
+if (!fs.existsSync(repoRoot) || !fs.statSync(repoRoot).isDirectory()) {
+  console.error(`Casebook Oracle — error: repository directory does not exist: ${repoRoot}`);
+  process.exit(1);
+}
 const agentsPath = path.join(repoRoot, 'AGENTS.md');
 const pmPath = path.join(repoRoot, 'docs', 'ENGINEERING_POSTMORTEMS.md');
 const maxTier0Tokens = 900;
@@ -69,12 +83,18 @@ if (fmMatch) {
 
 // Parse distinct CASE-NNN headers (strip HTML comments first; never count raw matching lines!)
 const caseHeaderRe = /^- \*\*(CASE-\d{3})\*\*\s+`\[([^\]]+)\]`(?:\s+·\s+`([^`]+)`)?\s+·\s+`status:\s*(compiled|prose|open)`/;
+const malformedCaseRe = /^- \*\*(case-\d+|CASE-(?!\d{3}\*\*)\d+)\*\*/;
 const seenIds = new Set();
 const tagToDistinctCases = new Map();
 const counts = { compiled: 0, prose: 0, open: 0 };
 const uncommentedPmText = pmText.replace(/<!--[\s\S]*?-->/g, '');
 
 for (const line of uncommentedPmText.split('\n')) {
+  const bad = line.match(malformedCaseRe);
+  if (bad) {
+    failures.push(`Malformed case ID "${bad[1]}" (must match 3-digit CASE-NNN, e.g., CASE-001)`);
+    continue;
+  }
   const m = line.match(caseHeaderRe);
   if (!m) continue;
   const [, id, rawTags, , status] = m;
