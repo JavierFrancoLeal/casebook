@@ -1,7 +1,7 @@
 {
   "name": "casebook",
   "displayName": "Casebook",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Bounded-entropy 4-tier constitutional memory for AI coding agents: Transferability x Recurrence routing, Open Symptoms Radar, 5-to-1 compaction, and executable verification.",
   "author": {
     "name": "Javier Franco",

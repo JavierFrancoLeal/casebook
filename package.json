@@ -1,0 +1,32 @@
+{
+  "name": "@franco/casebook",
+  "version": "1.0.0",
+  "description": "Bounded-entropy 4-tier constitutional memory for AI coding agents: Transferability x Recurrence routing, Open Symptoms Radar, 5-to-1 compaction, and executable verification.",
+  "type": "module",
+  "bin": {
+    "casebook": "./skills/casebook/scripts/verify-casebook.mjs"
+  },
+  "scripts": {
+    "test": "node --test test/verify-casebook.test.mjs",
+    "verify": "node skills/casebook/scripts/verify-casebook.mjs --repo ."
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "ai-agents",
+    "agent-memory",
+    "context-engineering",
+    "postmortems",
+    "llm-governance",
+    "casebook",
+    "antigravity"
+  ],
+  "author": "Javier Franco <https://github.com/JavierFrancoLeal>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JavierFrancoLeal/casebook.git"
+  },
+  "homepage": "https://github.com/JavierFrancoLeal/casebook"
+}
