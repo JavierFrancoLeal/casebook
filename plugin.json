@@ -1,0 +1,21 @@
+{
+  "name": "casebook",
+  "displayName": "Casebook",
+  "version": "0.1.0",
+  "description": "Bounded-entropy 4-tier constitutional memory for AI coding agents: Transferability x Recurrence routing, Open Symptoms Radar, 5-to-1 compaction, and executable verification.",
+  "author": {
+    "name": "Javier Franco",
+    "url": "https://github.com/JavierFrancoLeal"
+  },
+  "homepage": "https://github.com/JavierFrancoLeal/casebook",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JavierFrancoLeal/casebook.git"
+  },
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "Audit this repository's Casebook memory tiers and flag any recurrence clusters ready to compile into tests",
+    "Record this resolved bug as a structured CASE-NNN entry and route it by Transferability x Recurrence",
+    "Log this unresolved anomaly in the Open Symptoms Radar so future sessions can match it by error string"
+  ]
+}
