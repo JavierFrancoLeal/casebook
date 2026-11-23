@@ -7,7 +7,8 @@
 *By [Javier Franco](https://github.com/JavierFrancoLeal) · `v1.0.1` · Apache-2.0*
 
 > **"The world verifies the verifier."** — *Reality verifies the rule.*  
-> 📖 **Read the field-notes essay:** [Reality Verifies the Rule (Wan2.2, Android R8 & Wittgenstein)](./docs/ESSAY_REALITY_VERIFIES_THE_RULE.md)
+> 📖 **Read the field-notes essay:** [Reality Verifies the Rule (Wan2.2, Android R8 & Wittgenstein)](./docs/ESSAY_REALITY_VERIFIES_THE_RULE.md)  
+> 📚 **Cross-Project Precedents (`CASE-100..110`):** [Cold Case-Law Archive & Open Symptoms Radar](./docs/ENGINEERING_POSTMORTEMS.md)
 
 ![Casebook Oracle Terminal Demo](./assets/demo-terminal.svg)
 
@@ -73,6 +74,7 @@ npm test
 | **[`agent-governance`](https://github.com/JavierFrancoLeal/agent-governance)** | Complete 26-plugin DeepSeek Harness governance suite (mother repository) | **`v1.0.0` Live** |
 | **[`best-security-governance-architects`](https://github.com/JavierFrancoLeal/best-security-governance-architects)** | CPU-first pre-merge security & governance suite (`ECOSYSTEM_CONTRACT v1.2.0`) | **`v1.2.0` Live** |
 | **[`best-ui-ux-designers`](https://github.com/JavierFrancoLeal/best-ui-ux-designers)** | Adversarial UI/UX design judgment suite — 12 Barbell design minds & 4 Via Negativa auditors | **`v1.2.0` Live** |
+| **[`contrast-guard`](https://github.com/JavierFrancoLeal/contrast-guard)** | Zero-dependency WCAG 2.1 + perceptual CIELAB ΔE contrast & anti-camouflage auditor (CLI + headless Chrome CDP) | **`v1.0.0` Live** |
 
 ---
 
